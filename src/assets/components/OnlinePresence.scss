@@ -1,0 +1,98 @@
+// OnlinePresenceBooster.scss
+$core-blue: #4a90e2;
+$soft-blue: #a4c8e1;
+$text-color: #333;
+$highlight-color: #e30613;
+.booster-section {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: $text-color;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 7px solid#e30613;
+    border-right: 3px solid#e30613;
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .logo {
+        width: 100px;
+        margin-bottom: 20px;
+        transition: transform 0.3s;
+        &:hover {
+            transform: rotate(360deg);
+        }
+    }
+    .title {
+        font-size: 28px;
+        color: $highlight-color;
+        margin-bottom: 10px;
+    }
+    .description {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .package-list {
+        text-align: left;
+        margin-bottom: 20px;
+        li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            &:before {
+                content: "✔";
+                position: absolute;
+                left: 0;
+                color: $highlight-color;
+            }
+        }
+    }
+    .price {
+        font-size: 18px;
+        margin-bottom: 20px;
+        span {
+            font-size: 24px;
+            font-weight: bold;
+            color: $highlight-color;
+        }
+    }
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        .contact-info {
+            display: flex;
+            align-items: center;
+            .footer-logo {
+                width: 40px;
+                margin-right: 10px;
+            }
+        }
+        .qr-section {
+            text-align: right;
+            p {
+                margin-bottom: 5px;
+            }
+            .qr-code {
+                width: 70px;
+                transition: transform 0.3s;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .booster-section {
+        padding: 15px;
+    }
+}
